@@ -31,7 +31,10 @@ console.log(`Time Elapsed Solution2: ${(timeF2 - timeS2) / 1000} seconds`);
     es mejor que otro.
 
     Forma 1:
-    No. de operaciones: 
+    No. de operaciones: ?? (... = 0, ... = 1, ...<=, i++, ...+=)
+    Aquí no tenemos un número definido, puesto que la mayoría de las operaciones dependen del
+    número que asignemos a "n" (ej. el <= se ejecuta las veces que se ejecute el for, mismo caso
+    con el i++, etc.)
 
     Forma 2: 
     No. de operaciones: 3 (*, +, /)
