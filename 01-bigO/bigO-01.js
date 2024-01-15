@@ -9,10 +9,18 @@ function addUpTo(n) {
     }
     return total;
 }
-console.log(addUpTo(6));
+let timeS1 = performance.now();
+addUpTo(1000000000);
+let timeF1 = performance.now();
+console.log(`Time Elapsed Solution1: ${(timeF1 - timeS1) / 1000} seconds`);
+// console.log(addUpTo(6));
 
 // Forma 2
 function addUpTo2(n) {
     return n * (n + 1) / 2;
 }
-console.log(addUpTo2(6));
+let timeS2 = performance.now();
+addUpTo(1000000000);
+let timeF2 = performance.now();
+console.log(`Time Elapsed Solution2: ${(timeF2 - timeS2) / 1000} seconds`);
+// console.log(addUpTo2(6));
