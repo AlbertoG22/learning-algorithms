@@ -33,3 +33,14 @@ function double(arr) {
     a "n" (input).
     Por lo tanto, la complejidad será: O(n) + 2 --> O(n) space.
 */
+
+
+function logAtMost10(n) {
+    for (var i = 1; i <= Math.min(n, 10); i++) {
+        console.log(i);
+    }
+}
+
+/* 
+    Space complexity: O(1) space.
+*/
