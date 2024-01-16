@@ -25,20 +25,21 @@ let timeF2 = performance.now();
 console.log(`Time Elapsed Solution2: ${(timeF2 - timeS2) / 1000} seconds`);
 
 /* 
-    NOTA: A pesar de que la Forma 2 es más rápida que la 1, contar el tiempo no siempre es una forma
-    confiable de medir el performance de un código, puesto que depende de la máquina donde se ejecute.
-    Contar el número de operaciones que un código realiza SÍ es buena forma de comparar cuando uno
-    es mejor que otro.
+    NOTA: A pesar de que la Forma 2 es más rápida que la 1, contar el tiempo de esta manera 
+    no siempre es una forma confiable de medir el performance de un código, puesto que depende 
+    de la máquina donde se ejecute. 
+    Contar el número de operaciones que un código realiza SÍ es buena forma de medir el time
+    complexity de un algoritmo.
 
     Forma 1:
-    No. de operaciones: ?? (... = 0, ... = 1, ...<=, i++, ...+=)
+    - No. de operaciones: ?? (... = 0, ... = 1, ...<=, i++, ...+=)
     Aquí no tenemos un número definido, puesto que la mayoría de las operaciones dependen del
-    número que asignemos a "n" (ej. el <= se ejecuta las veces que se ejecute el for, mismo caso
-    con el i++, etc.).
-    BigO: O(n)
+    número que asignemos a "n" (ej. el "<=" se ejecuta las veces que se corra el for, mismo caso
+    con el "i++", etc.).
+    - BigO: O(n)
 
     Forma 2: 
-    No. de operaciones: 3 (*, +, /)
+    - No. de operaciones: 3 (*, +, /)
     No importa el valor de "n", siempre son 3 operaciones la que se realizan.
-    BigO: O(1)
+    - BigO: O(1)
 */
