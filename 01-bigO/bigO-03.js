@@ -60,3 +60,22 @@ function onlyElementsAtEvenIndex(array) {
     Space complexity: O(n) space.
     Ya que el tamaño del nuevo array depende del input.
 */
+
+
+function subtotals(array) {
+    var subtotalArray = Array(array.length);
+    for (var i = 0; i < array.length; i++) {
+        var subtotal = 0;
+        for (var j = 0; j <= i; j++) {
+            subtotal += array[j];
+        }
+        subtotalArray[i] = subtotal;
+    }
+    return subtotalArray;
+}
+
+/* 
+    Space complexity: O(n) space.
+    Mismo caso que el anterior, depende del input, no importa que haya nested loops, en términos 
+    de espacio la complejidad no incrementa.
+*/
