@@ -103,3 +103,28 @@ function charCount(str) {
         * Incorporar esa dificultad de nuevo.
 */
 
+// ===============================================================================================
+//  Problem: Mismo que el caso anterior.
+// ===============================================================================================
+
+// Respuesta:
+function charCount(str) {
+    // 1. make obj to return at end
+    let result = {};
+    // 2. loop over string, for each character...
+    for(let i = 1; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if(result[char] > 0) {
+            // 2.1 if the char is a num/letter and is a key in obj, add one to count
+            result[char]++;
+        } else {
+            // 2.2 if the char is a num/letter and is not in obj, add it and set value to 1
+            result[char] = 1;
+        }
+        // 2.3 if char is smth else (space, period, etc.), dont' do anything
+    }
+
+    // 3. return obj at end
+    return result;
+}
+charCount('Hello wOrld!');
