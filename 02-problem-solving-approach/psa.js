@@ -25,3 +25,14 @@
         4. Can the outputs be determined from the inputs? Do I have enough info to solve the problem?
         5. How should I label the important pieces of data that are a part of the problem?
 */
+
+// Respuestas:
+/* 
+    1. Implementar una suma.
+    2. ¿Qué tan grandes serán los números? ¿Aceptan decimales? ¿Qué pasa si solo se manda un 
+    número a la función? O si mandamos más?
+    3. ¿Debe ser in integer, float? ¿Qué pasa si mandamos un string? 
+    4. ¿Qué pasa si solo pasamos un número? Añadimos 0, undefined o algo en específico? 
+    5. En este caso no aplica, pero con problemas complejos esto nos puede ayudar mucho a 
+    entenderlo.
+*/
