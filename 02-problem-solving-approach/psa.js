@@ -89,3 +89,17 @@ function charCount(str) {
 
     // 3. return obj at end
 }
+
+// --------------------------- PASO 4: Solve Or Simplify ---------------------------
+/* 
+    El paso 4 es empezar a crear la solución del problema, o si no sabemos cómo hacerlo, 
+    simplificar el problema. Es mejor empezar a resolver y no quedarnos atorados en algo que
+    no sabemos cómo resolver.
+    
+    Simplify se refiere a lo siguiente:
+        * Encontrar el centro de la parte difícil de lo que estamos haciendo.
+        * Ignorar esa dificultad temporalmente.
+        * Escribir una solución simplificada.
+        * Incorporar esa dificultad de nuevo.
+*/
+
