@@ -73,3 +73,19 @@
     En este paso se refiere a tomar los pasos del problema y describirlos. Debe ser concreto
     y no describir todo, simplemente en términos generales paso a paso.
 */
+
+// ===============================================================================================
+//  Problem: Mismo que el caso anterior.
+// ===============================================================================================
+
+// Respuesta:
+function charCount(str) {
+    // 1. make obj to return at end
+
+    // 2. loop over string, for each character...
+        // 2.1 if the char is a num/letter and is a key in obj, add one to count
+        // 2.2 if the char is a num/letter and is not in obj, add it and set value to 1
+        // 2.3 if char is smth else (space, period, etc.), dont' do anything
+
+    // 3. return obj at end
+}
