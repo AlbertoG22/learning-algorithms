@@ -21,4 +21,16 @@
 
     - Searching: cuando queremos buscar si un elemento está en un array, se debe recorrer uno a
     uno para encontrarlo, por eso es O(n)
+
+
+    - BigO Array Methods:
+        * push      - O(1)
+        * pop       - O(1)
+        * shift     - O(n)
+        * unshift   - O(n)
+        * concat    - O(n)
+        * slice     - O(n)
+        * splice    - O(n)
+        * sort      - O(n * log n)
+        * forEach/map/filter/reduce/etc - O(n)
 */

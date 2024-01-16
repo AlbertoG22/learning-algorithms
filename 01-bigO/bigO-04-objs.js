@@ -1,4 +1,4 @@
-//                           BigO of Objects
+//                                  BigO of Objects
 /* 
     Los objetos son buenos cuando:
     - no se necesita tener un orden,
