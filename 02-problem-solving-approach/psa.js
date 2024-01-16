@@ -66,3 +66,10 @@
         - Invalid inputs:
             [1, 2, 3] 			→ 	??
 */
+
+
+// --------------------------- PASO 3: Break it down ---------------------------
+/* 
+    En este paso se refiere a tomar los pasos del problema y describirlos. Debe ser concreto
+    y no describir todo, simplemente en términos generales paso a paso.
+*/
