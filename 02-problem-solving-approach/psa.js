@@ -47,3 +47,22 @@
         * Explore examples with empty inputs. 
         * Explore examples with invalid inputs.
 */
+
+// ===============================================================================================
+//  Problem: Escribe una función que tome un string y retorne la cantidad de veces que hay cada 
+//  carácter en el string.
+// ===============================================================================================
+
+/* 
+    ¿Qué pasa en los casos donde se mande lo siguiente?
+        - Simple examples:
+            "aaaa" 			    → 	{ a:4 }
+            "hello" 			→ 	{ h:1, e:1, l:2, o:1 }
+        - Complex examples:
+            "my phone is 123" 	→ 	{ m:1, y:1, p:1, ' ':3, ... } ** ¿Toma en cuenta el espacio vacío?
+            "Hello hi" 			→ 	{ H:1, h:1 } 	    ** ¿Debe ser case sensitive?
+        - Empty inputs:
+            "" 				    → 	??
+        - Invalid inputs:
+            [1, 2, 3] 			→ 	??
+*/
