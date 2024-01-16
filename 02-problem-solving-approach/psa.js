@@ -10,12 +10,7 @@
 */
 
 
-// Ejemplo:
-// ===============================================================================================
-// Problem: Write a function which takes two numbers and return their sum.
-// ===============================================================================================
-
-// ---------------------- PASO 1: ----------------------
+// ------------------------ PASO 1: Understand the Problem ------------------------
 /* 
     Para entender el problema hay ciertas preguntas que nos podemos hacer (o al entrevistador
     para comprender lo que se nos pide):
@@ -26,8 +21,12 @@
         5. How should I label the important pieces of data that are a part of the problem?
 */
 
-// Respuestas:
+// ===============================================================================================
+//  Problem: Escribe una función que reciba dos números y retorne la suma.
+// ===============================================================================================
+
 /* 
+    Respuestas:
     1. Implementar una suma.
     2. ¿Qué tan grandes serán los números? ¿Aceptan decimales? ¿Qué pasa si solo se manda un 
     número a la función? O si mandamos más?
@@ -35,4 +34,16 @@
     4. ¿Qué pasa si solo pasamos un número? Añadimos 0, undefined o algo en específico? 
     5. En este caso no aplica, pero con problemas complejos esto nos puede ayudar mucho a 
     entenderlo.
+*/
+
+
+// --------------------------- PASO 2: Concrete Examples ---------------------------
+/* 
+    Una vez que ya se entiende todo el problema, escribamos casos de ejemplo, por ejemplo 
+    decir: “para este input, la respuesta debe ser tal”. 
+    Algunos puntos importantes en estos ejemplos son los siguientes:
+        * Start with simple examples. 
+        * Progress to more complex examples.
+        * Explore examples with empty inputs. 
+        * Explore examples with invalid inputs.
 */
