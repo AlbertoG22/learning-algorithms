@@ -42,6 +42,7 @@ function logAtLeast5(n) {
       console.log(i);
     }
 }
+logAtLeast5(100);
 
 /* 
     En el ejemplo anterior se tiene una función donde imprime los números del 1 hasta "n", 
@@ -59,6 +60,7 @@ function logAtMost5(n) {
       console.log(i);
     }
 }
+logAtMost5(100);
 
 /* 
     En el ejemplo anterior es al revés, la función imprime los números del 1 al 5 siempre y
