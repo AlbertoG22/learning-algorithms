@@ -128,3 +128,9 @@ function charCount(str) {
     return result;
 }
 charCount('Hello wOrld!');
+
+/* 
+    En esta parte ya tenemos un 90% del ejercicio, lo que hace falta es diferenciar los caracteres
+    alfanuméricos. Suponiendo que no nos acordemos o no sepamos, una opción puede ser recurrir al
+    entrevistador y preguntar por una pista o consejo.
+*/
