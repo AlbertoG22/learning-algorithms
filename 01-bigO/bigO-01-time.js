@@ -1,3 +1,5 @@
+//                               TIME COMPLEXITY
+
 // Problema: 
 // Escribir una función que calcule la suma de todos los números de 1 a n (incluyendo n);
 // Ej: si tenemos 6 => 1+2+3+4+5+6 = 21

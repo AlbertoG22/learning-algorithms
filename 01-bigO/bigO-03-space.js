@@ -1,4 +1,5 @@
-//                                      TIME COMPLEXITY
+//                                 SPACE COMPLEXITY
+
 // BigO también sirve para definir la complejidad en cuanto a espaico en memoria que ocupa el algoritmo
 function sum(arr) {
     let total = 0;
