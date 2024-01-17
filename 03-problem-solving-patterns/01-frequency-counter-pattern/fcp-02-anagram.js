@@ -43,7 +43,7 @@ function validAnagram(str1, str2) {
 
 
 // ---------------- Solución del video ----------------
-function validAnagram2(first, second) {
+function validAnagram(first, second) {
     if(first.length !== second.length) {
         return false;
     }
@@ -76,3 +76,22 @@ function validAnagram2(first, second) {
     no existe en el obj o ya quedó en 0 (0 es falsy), termina la ejecución.
     - Si todo se ejecuta normal, termina el ciclo y retorna 'true'.
 */
+
+
+// Prácticando nuevamente el ejercicio con lo aprendido
+function anagramChallenge(str1, str2) {
+    if(str1.length !== str2.length) return false;
+
+    const freqCounter = {};
+
+    for(const letter of str1) {
+        freqCounter[letter] ? freqCounter[letter] += 1 : freqCounter[letter] = 1;
+    }
+
+    for(const a of str2) {
+        if(freqCounter[a]) freqCounter[a] -= 1;
+        else return false;
+    }
+    return true;
+}
+anagramChallenge('anagram', 'nagaram');
