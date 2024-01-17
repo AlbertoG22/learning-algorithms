@@ -11,7 +11,7 @@
 /* 
     Problema:
     Escriba una función llamada 'sumZero' que acepte un array de enteros ORDENADOS. La función debe 
-    encontrar el primer par de valores donde la suma sea 0. Retornar un array que incluya ambos valores
+    encontrar el PRIMER par de valores donde la suma sea 0. Retornar un array que incluya ambos valores
     o 'undefined' si no existe un par.
 
     Output:
@@ -40,3 +40,19 @@ function sumZero(arr){
     encuentra la suma que dé 0 o retorne undefined.
     - Al ser dos ciclos anidados, estos es una complejidad cuadrática --> O(n²).
 */
+
+// -------- Solución refactorizada: --------
+function sumZero(arr){
+    let left = 0;
+    let right = arr.length - 1;
+    while(left < right){
+        let sum = arr[left] + arr[right];
+        if(sum === 0){
+            return [arr[left], arr[right]];
+        } else if(sum > 0){
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
