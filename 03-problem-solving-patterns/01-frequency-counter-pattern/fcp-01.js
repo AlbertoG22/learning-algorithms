@@ -43,10 +43,10 @@ same([1, 2, 3, 2], [9, 1, 4, 4]); // true
     la ejecución.
     - Si sí encuentra un índice, elimina ese elemento del arr2 y continúa al siguiente elemento 
     del arr1.
-    - As+i hasta eliminar todos los elementos y retornar 'true'.
+    - Así hasta eliminar todos los elementos y retornar 'true'.
 
-    En esta solución hay dos ciclos: el for y el indexOf, el cual recorre los elementos del array hasta
-    encontrar el primer índice del elemento a buscar. 
+    En esta solución hay dos ciclos anidados: el for y el indexOf, el cual recorre los elementos del 
+    array hasta encontrar el primer índice del elemento a buscar. 
     Por lo que el time complexity es: O(n²).
 */
 
@@ -64,6 +64,8 @@ function same(arr1, arr2){
         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;        
     }
     for(let key in frequencyCounter1){
+        console.log(key);
+        // El operador "in" devuelve true si la key especificada está en el objeto especificado.
         if(!(key ** 2 in frequencyCounter2)){
             return false;
         }
@@ -74,3 +76,22 @@ function same(arr1, arr2){
     return true;
 }
 same([1, 2, 3, 2], [9, 1, 4, 4]); // true
+
+/* 
+    Explanation:
+    - Al igual que el anterior, primero revisa si la longitud de ambos arrays es igual.
+    - La idea del patrón es usar objetos, por lo que tenemos dos objetos frequencyCounter1 y 
+    frequencyCounter2, cada uno va a almacenar la frecuencia de los valores individuales de los arrays.
+    - El primer objeto almacenará la cantidad de elementos que hay en el primer array, la key será el 
+    número, y el value será la cantidad de veces que se repite. 
+    - Lo mismo con el segundo array, almacenar la cantidad de veces repetidas.
+    - El tercer loop itera sobre el objeto1 y checamos si esa key (al cuadrado), se encuentra en el objeto2,
+    si no, termina la ejecución.
+    - Si sí, ahora checa si el value de esa key es el mismo tanto del objeto1 como del objeto2.
+    - Si todo se ejecuta bien, termina el ciclo y retorna 'true'.
+
+    En esta solución hay 3 ciclos, pero ninguno anidado, por lo que el time complexity es lineal: 
+    3 O(n) --> O(n)
+    Mientras más aumente el tamaño de los arrays, más operaciones se realizan, sin embargo, siempre será
+    mejor esto que una complejidad cuadrática.
+*/
