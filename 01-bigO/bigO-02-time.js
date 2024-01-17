@@ -32,7 +32,7 @@ printAllPairs(4);
 /* 
     En el ejemplo anterior, vemos que tenemos un ciclo (O(n)), pero dentro tenemos otro ciclo, 
     por lo que por cada operación del ciclo de afuera se ejecuta otra vez O(n), esto no es 
-    2 veces O(n), sino n * n, es decir O(n^2).
+    2 veces O(n), sino n * n, es decir O(n²).
 */
 
 
