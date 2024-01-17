@@ -150,3 +150,33 @@ charCount('Hello wOrld!');
         * Can you think of other ways to refactor?
         * How have other people solved this problem?
 */
+
+// Solución:
+function charCount(str) {
+    let obj = {};
+    for(let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if(/[a-z0-9]/.test(char)) {
+            if(obj[char] > 0) {
+                obj[char]++;
+            } else {
+                obj[char] = 1;
+            }
+        }
+    }
+    return obj;
+}
+charCount('Hello-wOrld!');
+
+// Solución refactorizada:
+function charCount(str) {
+    let obj = {};
+    for(let char of str) {
+        if(/[a-z0-9]/.test(char)) {
+            char = char.toLowerCase();
+            obj[char] = ++obj[char] || 1;
+        }
+    }
+    return obj;
+}
+charCount('Hello-wOrld!');
