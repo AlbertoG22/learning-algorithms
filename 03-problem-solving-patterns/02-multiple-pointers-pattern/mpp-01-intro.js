@@ -31,3 +31,12 @@ function sumZero(arr){
         }
     }
 }
+
+/* 
+    Explanation:
+    - El problema anterior usa dos ciclos anidados, en el primero se selecciona el primer elemento del
+    array, mientras el segundo itera sobre el mismo array empezando desde la segunda posición. 
+    - Si no lo encuentra, pasa al siguiente elemento y comienza la búsqueda nuevamente hasta que 
+    encuentra la suma que dé 0 o retorne undefined.
+    - Al ser dos ciclos anidados, estos es una complejidad cuadrática --> O(n²).
+*/
