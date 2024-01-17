@@ -9,7 +9,6 @@
         - Paso 5: Look Back and Refactor
 */
 
-
 // ------------------------ PASO 1: Understand the Problem ------------------------
 /* 
     Para entender el problema hay ciertas preguntas que nos podemos hacer (o al entrevistador
@@ -90,6 +89,7 @@ function charCount(str) {
     // 3. return obj at end
 }
 
+
 // --------------------------- PASO 4: Solve Or Simplify ---------------------------
 /* 
     El paso 4 es empezar a crear la solución del problema, o si no sabemos cómo hacerlo, 
@@ -133,4 +133,20 @@ charCount('Hello wOrld!');
     En esta parte ya tenemos un 90% del ejercicio, lo que hace falta es diferenciar los caracteres
     alfanuméricos. Suponiendo que no nos acordemos o no sepamos, una opción puede ser recurrir al
     entrevistador y preguntar por una pista o consejo.
+*/
+
+
+// --------------------------- PASO 5: Look Back and Refactor ---------------------------
+/* 
+    Este paso es una vez que ya se completaron los demás, y cuando ya tenemos una solución 
+    completa.
+    
+    Refactoring questions:
+        * Can you check the result?
+        * Can you derive the result differently?
+        * Can you understand it at a glance?
+        * Can you use the result or method for some other problem?
+        * Can you improve the performance of your solution?
+        * Can you think of other ways to refactor?
+        * How have other people solved this problem?
 */
