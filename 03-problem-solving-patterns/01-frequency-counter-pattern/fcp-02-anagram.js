@@ -19,6 +19,7 @@
 */
 // ===============================================================================================
 
+
 // ---------------- Mi solución ----------------
 function validAnagram(str1, str2) {
   if (str1.length !== str2.length) {
@@ -39,3 +40,39 @@ function validAnagram(str1, str2) {
   }
   return true;
 }
+
+
+// ---------------- Solución del video ----------------
+function validAnagram2(first, second) {
+    if(first.length !== second.length) {
+        return false;
+    }
+    const lookup = {};
+
+    for(let i = 0; i < first.length; i++) {
+        let letter = first[i];
+        lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1;
+    }
+
+    for(let i = 0; i < second.length; i++) {
+        let letter = second[i];
+        if(!lookup[letter]) {
+            return false;
+        } else {
+            lookup[letter] -= 1; 
+        }
+    }
+    return true;
+}
+
+/* 
+    Explanation:
+    - El inicio es el mismo, lo que cambia es que en vez de usar dos objetos, ahora solo se crea 
+    uno (lookup) y solo dos ciclos.
+    - Después se guarda la frecuencia de cada letra del primer string en el objeto. Si existe la pro-
+    piedad, se le suma 1, si no, se establece en 1.
+    - En el segundo loop, se itera sobre el segundo string, en donde cada una de las letras se este, 
+    se busca dentro del objeto, si las encuentra, le resta 1 al value, si no, significa que esa letra 
+    no existe en el obj o ya quedó en 0 (0 es falsy), termina la ejecución.
+    - Si todo se ejecuta normal, termina el ciclo y retorna 'true'.
+*/
