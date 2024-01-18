@@ -9,4 +9,22 @@
     Dado el string "hellothere", queremos obtener la mayor secuencia de caracteres únicos existentes
     en ese string. Tendremos los subconjuntos: hel, lother, e.
     Por lo que la secuencia mayor de caracteres únicos es 'lother'.
+
+    NOTA: Este patrón es bueno cuando necesitamos hacer subconjuntos de datos.
 */
+
+// ===============================================================================================
+/* 
+    Problema:
+    Escriba una función llamada 'maxSubarraySum' que acepte un array de enteros y un número llamado 'n'.
+    La función deberá calcular la suma máxima de 'n' elementos consecutivos en el array.
+
+    Output:
+    maxSubarraySum([1,2,5,2,8,1,5],2) // 10
+    maxSubarraySum([1,2,5,2,8,1,5],4) // 17
+    maxSubarraySum([4,2,1,6],1) // 6
+    maxSubarraySum([4,2,1,6,2],4) // 13
+    maxSubarraySum([],4) // null
+*/
+// ===============================================================================================
+
