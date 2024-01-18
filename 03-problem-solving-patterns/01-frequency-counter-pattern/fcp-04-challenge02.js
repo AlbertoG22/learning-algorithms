@@ -32,10 +32,10 @@ areThereDuplicates(1, 2, 3); // false
 function areThereDuplicates() {
     let collection = {};
     for(let val in arguments){
-      collection[arguments[val]] = (collection[arguments[val]] || 0) + 1;
+        collection[arguments[val]] = (collection[arguments[val]] || 0) + 1;
     }
     for(let key in collection){
-      if(collection[key] > 1) return true;
+        if(collection[key] > 1) return true;
     }
     return false;
 }
@@ -55,3 +55,23 @@ function areThereDuplicates(...args) {
     return false;
 }
 areThereDuplicates('a', 'b', 'c', 'a'); // true
+
+// ---------------- Solución del curso MPP ----------------
+function areThereDuplicates(...args) {
+    args.sort((a, b) => {
+        if (a < b) return -1;
+        if (a > b) return 1;
+        return 0;
+    });
+   
+    let start = 0;
+    let next = 1;
+    while (next < args.length) {
+        if (args[start] === args[next]) {
+            return true;
+        }
+        start++;
+        next++;
+    }
+    return false;
+}
