@@ -81,3 +81,19 @@ function sumZero(arr){
 
     NOTA: como se ve, en este patrón el orden de los elementos es muy importante.
 */
+
+
+// Prácticando nuevamente el ejercicio con lo aprendido
+function pairsSumZero(arr) {
+    let first = 0;
+    let last = arr.length - 1;
+    let sum;
+
+    for(let i = first; i < last; i++) {
+        sum = arr[last] + arr[first];
+        if(sum > 0) last--;
+        else if(sum < 0) first++;
+        else return [arr[first], arr[last]];
+    }
+}
+pairsSumZero([-4, -3, -2, -1, 0, 1, 2, 3, 10]);
