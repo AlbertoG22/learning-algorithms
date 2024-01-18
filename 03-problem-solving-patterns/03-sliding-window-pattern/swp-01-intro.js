@@ -45,3 +45,19 @@ function maxSubarraySum(arr, num) {
   }
   return max;
 }
+
+/* 
+    Explanation:
+    - Lo primero es atender el edge case, en donde, si el número de subconjuntos es mayor a la cantidad
+    de elementos del array, retorne 'null'.
+    - Lo siguiente es definir un número muy bajo para que, sea cual sea el resultado de la primera suma,
+    siempre sea menor que este número y se actualice.
+    - Después tenemos un ciclo que se encarga de recorrer el array desde el inicio, hasta el último
+    subconjunto de datos que pueda tomar. Si n = 2, llegará hasta el penúltimo índice del array.
+    - Dentro hay otro ciclo que se encargará de ir recorriendo el índice la cantidad de veces de n 
+    desde el elemento i (por eso hace i + j), haciendo la suma de números.
+    - Ya que se tiene la suma de n elementos, se compara con 'max', si es mayor se actualiza.
+    - Al final retorna este número.
+
+    - Hay dos ciclos anidados, por lo que la complejidad es de O(n²).
+*/
