@@ -59,5 +59,21 @@ function maxSubarraySum(arr, num) {
     - Ya que se tiene la suma de n elementos, se compara con 'max', si es mayor se actualiza.
     - Al final retorna este número.
 
-    - Hay dos ciclos anidados, por lo que la complejidad es de O(n²).
+    - Al ser dos ciclos anidados, estos es una complejidad cuadrática --> O(n²).
 */
+
+// -------- Solución refactorizada: --------
+function maxSubarraySum(arr, num){
+    let maxSum = 0;
+    let tempSum = 0;
+    if (arr.length < num) return null;
+    for (let i = 0; i < num; i++) {
+      maxSum += arr[i];
+    }
+    tempSum = maxSum;
+    for (let i = num; i < arr.length; i++) {
+      tempSum = tempSum - arr[i - num] + arr[i];
+      maxSum = Math.max(maxSum, tempSum);
+    }
+    return maxSum;
+}
