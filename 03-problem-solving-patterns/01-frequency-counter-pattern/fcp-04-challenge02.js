@@ -75,9 +75,13 @@ function areThereDuplicates(...args) {
     }
     return false;
 }
-
 /* 
     La clave en esta solución es el sort() que hace al inicio, de esta manera si hay elementos repetidos,
     se van a ordenar uno después de otro y se podrá aplicar perfectamente el patrón de multiple pointers
     cuando se haga la comparación "args[start] === args[next]".
 */
+
+// ---------------- Solución del curso (One Liner) ----------------
+function areThereDuplicates() {
+    return new Set(arguments).size !== arguments.length;
+}
