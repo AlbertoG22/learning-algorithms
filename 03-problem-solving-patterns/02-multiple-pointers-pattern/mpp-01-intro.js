@@ -80,6 +80,8 @@ function sumZero(arr){
         sum = -3 + 3 = 0
 
     NOTA: como se ve, en este patrón el orden de los elementos es muy importante.
+    
+    - Complejidad lineal: O(n)
 */
 
 
