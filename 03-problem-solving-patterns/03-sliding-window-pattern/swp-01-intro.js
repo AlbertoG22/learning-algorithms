@@ -62,6 +62,7 @@ function maxSubarraySum(arr, num) {
     - Al ser dos ciclos anidados, estos es una complejidad cuadrática --> O(n²).
 */
 
+
 // -------- Solución refactorizada: --------
 function maxSubarraySum(arr, num){
     let maxSum = 0;
@@ -95,6 +96,29 @@ function maxSubarraySum(arr, num){
         * Este valor temporal se compara con el máximo y si es mayor, se asigna a la variable.
         * Este proceso se ejecuta hasta que se termina el array y se retorna la suma máxima.
     
-    - Al ser dos ciclos no anidados, la complejidad lineal --> O(n).
-    
+    - Al ser dos ciclos no anidados, la complejidad lineal --> O(n).  
 */
+
+
+// -------- Prácticando nuevamente el ejercicio con lo aprendido --------
+function subsetSum(arr, num) {
+    if(arr.length < num) return null;
+    let tempSum = 0;
+    let maxSum = 0;
+    // suma del primer subset
+    for(let i = 0; i < num; i++) {
+        tempSum += arr[i];
+    }
+    maxSum = tempSum;
+    for(let i = num; i < arr.length; i++) {
+        tempSum = tempSum - arr[i - num] + arr[i];
+        if(tempSum > maxSum) maxSum = tempSum;
+    }
+    return maxSum;
+}
+subsetSum([4,2,1,6,2],4); // 13
+subsetSum([2, 6, 9, 1, 8, 5, 6, 3], 3); // 19
+subsetSum([1,2,5,2,8,1,5],2) // 10
+subsetSum([4,2,1,6],1) // 6
+subsetSum([1,2,5,2,8,1,5],4) // 17
+subsetSum([],4) // null
