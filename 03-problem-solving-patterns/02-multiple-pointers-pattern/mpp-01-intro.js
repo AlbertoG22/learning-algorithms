@@ -41,6 +41,7 @@ function sumZero(arr){
     - Al ser dos ciclos anidados, estos es una complejidad cuadrática --> O(n²).
 */
 
+
 // -------- Solución refactorizada: --------
 function sumZero(arr){
     let left = 0;
@@ -56,3 +57,27 @@ function sumZero(arr){
         }
     }
 }
+
+/* 
+    Explanation:
+    [-4, -3, -2, -1, 0, 1, 2, 3, 10]
+    - Se tienen dos punteros, uno que inicia a la izquierda (índice 0) y otro que inicia a la derecha
+    (último índice).
+        Índice 0 = -4       |       Índice (arr.length - 1 = 8) = 10
+    - Después se tiene un ciclo, en donde lo primero que se hace es sumar los valores de estos dos 
+    índices.
+        sum = -4 + 10 = 6
+    - Si la suma es mayor a 0, significa que el valor que tiene el último índice del array es muy alto,
+    por lo que debemos reducirlo, restando uno al índice.
+        right = 7 --> arr[7] = 3
+    - Como el índice 'left' es menor que 'right', entra en el ciclo de nuevo.
+    - Hace el cálculo, y si ahora el resultado es menor a 0, significa que hay que aumentar el número
+    menor (mover el índice menor).
+        sum = -4 + 3 = -1
+        left = 1 --> arr[1] = -3
+    - Así sucesivamente hasta que la suma da 0 y retorne los valores de esos índices o 'undefined' en
+    caso de no haber.
+        sum = -3 + 3 = 0
+
+    NOTA: como se ve, en este patrón el orden de los elementos es muy importante.
+*/
