@@ -14,14 +14,17 @@
 
 // ---------------- Mi solución ----------------
 function sameFrequency(a, b){
-    if(a.toString().length !== b.toString().length) return false;
+    let num1 = a.toString();
+    let num2 = b.toString();
+
+    if(num1.length !== num2.length) return false;
     
     let lookup = {};
-    for(const digitA of a.toString()) {
+    for(const digitA of num1) {
         lookup[digitA] ? lookup[digitA] += 1 : lookup[digitA] = 1;
     }
-    
-    for(const digitB of b.toString()) {
+
+    for(const digitB of num2) {
         if(!(digitB in lookup)) return false;
         lookup[digitB] -= 1;
     }
