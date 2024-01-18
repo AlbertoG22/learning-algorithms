@@ -44,7 +44,6 @@ function search(array, val) {
  
     while (min <= max) {
         let middle = Math.floor((min + max) / 2);
-        let currentElement = array[middle];
  
         if (array[middle] < val) {
             min = middle + 1;
@@ -58,3 +57,14 @@ function search(array, val) {
     }
     return -1;
 }
+
+/* 
+    Explanation:
+    - Esta solución es Binary Search, en donde a grandes rasgos lo que hace es dividir el array a la
+    mitad, y ver si el objetivo es mayor o menor que el valor en medio.
+    - Dependiendo de esto, decide si ir en una dirección o en otra buscando el objetivo.
+    - Después hace lo mismo, dividir y cambiar de dirección.
+    - Para que el algoritmo funcione es IMPORTANTE que los elementos estén ordenados.
+
+    - A pesar de que tiene un ciclo, el time complexity no es de O(n), sino ---> Log(n)
+*/
