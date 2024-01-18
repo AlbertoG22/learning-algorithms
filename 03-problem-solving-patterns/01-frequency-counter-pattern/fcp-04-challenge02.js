@@ -17,6 +17,16 @@
     areThereDuplicates('a', 'b', 'c', 'a'); // true 
 */
 
+// ---------------- Mi solución FCP ----------------
+function areThereDuplicates(...args) {
+    const freqCount = {};
+    for(const el of args){
+        if(!freqCount[el]) freqCount[el] = 1;
+        else return true;
+    }
+    return false;
+}
+areThereDuplicates(1, 2, 3); // false
 
 
 
@@ -43,4 +53,12 @@
 
 
 
-
+function areThereDuplicates(...args) {
+    // good luck. (supply any arguments you deem necessary.)
+      let freq = {};
+      for(let a of args) {
+          if(a in freq) return true;
+          freq[a] = 1;
+      }
+      return false;
+  }
