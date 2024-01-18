@@ -35,3 +35,26 @@ function search(arr, val){
     - El ciclo recorre el array elemento por elemento hasta encontrar el deseado, si no, retorna -1.
     - Al haber un ciclo esto hace que la complejidad sea lineal ---> O(n)
 */
+
+// -------- Solución refactorizada: --------
+function search(array, val) {
+ 
+    let min = 0;
+    let max = array.length - 1;
+ 
+    while (min <= max) {
+        let middle = Math.floor((min + max) / 2);
+        let currentElement = array[middle];
+ 
+        if (array[middle] < val) {
+            min = middle + 1;
+        }
+        else if (array[middle] > val) {
+            max = middle - 1;
+        }
+        else {
+            return middle;
+        }
+    }
+    return -1;
+}
