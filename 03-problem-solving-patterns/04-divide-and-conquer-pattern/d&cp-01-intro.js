@@ -29,3 +29,9 @@ function search(arr, val){
     }
     return -1;
 }
+
+/* 
+    Explanation:
+    - El ciclo recorre el array elemento por elemento hasta encontrar el deseado, si no, retorna -1.
+    - Al haber un ciclo esto hace que la complejidad sea lineal ---> O(n)
+*/
