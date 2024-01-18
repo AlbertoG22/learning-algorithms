@@ -77,3 +77,24 @@ function maxSubarraySum(arr, num){
     }
     return maxSum;
 }
+
+/* 
+    Explanation:
+    ([2, 6, 9, 1, 8, 5, 6, 3], 3)
+    - Primero se agrega el edge case.
+    - La idea de este patrón es, en lugar de ir haciendo la suma cada vez una y otra vez (O(n²)), es 
+    mejor restar el primer valor y sumarle el nuevo.
+    Ejemplo: 
+        * Se tiene el array anterior y queremos hacer subsets de 3 elementos.
+        * El primer loop se encarga de hacer la suma de [2, 6, 9] = 17
+        * Este valor se asigna a la suma temporal (tempSum).
+        * El siguiente loop va a iniciar en 'n' ([1]) y restará el valor de la posición [i - num] = 0,
+        es decir, el elemento con índice 0 para después sumarle el [1], puesto que los valores [6, 9] 
+        se siguen tomando en cuenta dentro del subset de 3. Ahora la suma calculada es de los valores 
+        [6, 9, 1] = 16.
+        * Este valor temporal se compara con el máximo y si es mayor, se asigna a la variable.
+        * Este proceso se ejecuta hasta que se termina el array y se retorna la suma máxima.
+    
+    - Al ser dos ciclos no anidados, la complejidad lineal --> O(n).
+    
+*/
