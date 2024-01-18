@@ -1,4 +1,4 @@
-// ------------------- Frequency Counter / Multiple Pointers Challenge ------------------------------
+// ------------------- Are There Duplicates Solution Challenge ------------------------------
 /* 
     Problema:
     Escribe una función llamada 'areThereDuplicates' que acepte un número indefinido de argumentos y 
@@ -19,7 +19,6 @@
 
 // ---------------- Mi solución FCP ----------------
 function areThereDuplicates(...args) {
-    if(args.length === 0) return false;
     const freqCount = {};
     for(const el of args){
         if(freqCount[el]) return true;
@@ -29,9 +28,21 @@ function areThereDuplicates(...args) {
 }
 areThereDuplicates(1, 2, 3); // false
 
+// ---------------- Solución del curso FCP ----------------
+function areThereDuplicates() {
+    let collection = {};
+    for(let val in arguments){
+      collection[arguments[val]] = (collection[arguments[val]] || 0) + 1;
+    }
+    for(let key in collection){
+      if(collection[key] > 1) return true;
+    }
+    return false;
+}
+
+
 // ---------------- Mi solución MPP ----------------
 function areThereDuplicates(...args) {
-    if(args.length === 0) return false;
     let indexA = args[0];
     let obj = {};
     obj[indexA] = 1;
