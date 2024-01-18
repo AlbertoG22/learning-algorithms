@@ -31,3 +31,28 @@ function sameFrequency(a, b){
     return true;
 }
 sameFrequency(22,222); // false
+
+// ---------------- Otra solución hecha por mí ----------------
+function sameFrequency(a, b){
+    let num1 = a.toString();
+    let num2 = b.toString();
+    
+    if(num1.length !== num2.length) return false;
+    
+    let freqCount1 = {};
+    let freqCount2 = {};
+    
+    for(let val of num1) {
+        freqCount1[val] = ((freqCount1[val] || 0) + 1);
+    }
+    for(let val of num2) {
+        freqCount2[val] = ((freqCount2[val] || 0) + 1);
+    }
+    
+    for(let a in freqCount1) {
+        if(!(a in freqCount2)) return false;
+        if(freqCount1[a] !== freqCount2[a]) return false;
+    }
+    
+    return true;
+}
