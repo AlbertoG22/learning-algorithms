@@ -78,7 +78,7 @@ function validAnagram(first, second) {
 */
 
 
-// Prácticando nuevamente el ejercicio con lo aprendido
+// -------- Prácticando nuevamente el ejercicio con lo aprendido --------
 function anagramChallenge(str1, str2) {
     if(str1.length !== str2.length) return false;
 

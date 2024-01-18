@@ -85,7 +85,7 @@ function sumZero(arr){
 */
 
 
-// Prácticando nuevamente el ejercicio con lo aprendido
+// -------- Prácticando nuevamente el ejercicio con lo aprendido --------
 function pairsSumZero(arr) {
     let first = 0;
     let last = arr.length - 1;
