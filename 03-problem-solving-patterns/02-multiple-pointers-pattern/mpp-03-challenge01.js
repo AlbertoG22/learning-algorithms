@@ -15,6 +15,7 @@
     averagePair([],4); // false
 */
 
+// ---------------- Mi solución ----------------
 function averagePair(array, average) {
     let startIndex = 0;
     let endIndex = array.length - 1;

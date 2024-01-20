@@ -16,6 +16,7 @@
     isSubsequence('abc', 'acb'); // false (order matters)
 */
 
+// ---------------- Mi solución ----------------
 function isSubsequence(str1, str2) {
     let pointer = 0;
 
