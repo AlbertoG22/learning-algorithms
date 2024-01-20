@@ -16,48 +16,13 @@
     isSubsequence('abc', 'acb'); // false (order matters)
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function isSubsequence(str1, str2) {
-    // good luck. Add any arguments you deem necessary.
-      let arr1 = str1.split('');
-      let arr2 = str2.split('');
-      let i = 0;
-  
-      for(let j = 0; j < arr2.length; j++) {
-          if(arr1[i] === arr2[j]) {
-              i++;
-          }
-      }
-      if(i < str1.length) return false;
-      return true;
+    let pointer = 0;
+
+    for(let i = 0; i < str2.length + 1; i++) {
+        if(pointer === str1.length) return true;
+        if(str1[pointer] === str2[i]) pointer++;
+    }
+    return false;
 }
+isSubsequence('abc', 'dabracadabra'); // true
