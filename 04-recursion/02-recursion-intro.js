@@ -20,6 +20,14 @@ function countDown(num){
 }
 countDown(3);
 
+// console.log(3);
+// countDown(2);
+// console.log(2);
+// countDown(1);
+// console.log(1);
+// countDown(0);
+// countDown("All done!");
+
 /* 
     Explanation:
     - Cuando mandamos llamar la función con el argumento "3", lo que primero se hace es preguntar si el
