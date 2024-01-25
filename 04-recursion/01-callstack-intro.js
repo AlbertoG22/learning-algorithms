@@ -11,3 +11,85 @@
         2. Cuando JS ve la palabra 'return' o la función termina, el compilador la remueve (pop) de 
         la pila.
 */
+
+// Ejemplo:
+function takeShower(){
+    return "Showering!"
+}
+
+function eatBreakfast(){
+    let meal = cookFood()
+    return `Eating ${meal}`
+}
+
+function cookFood(){
+    let items = ["Oatmeal", "Eggs", "Protein Shake"]
+    return items[Math.floor(Math.random()*items.length)];
+}
+function wakeUp() {
+    takeShower()
+    eatBreakfast()
+    console.log("Ok ready to go to work!")
+}
+
+wakeUp();
+
+// CallStack 1:
+/* 
+    wakeUp()
+*/
+
+// CallStack 2:
+/* 
+    takeShower()
+    wakeUp()
+*/
+
+// CallStack 3:
+/* 
+    takeShower() // return "Showering!"
+    wakeUp()
+*/
+
+// CallStack 4:
+/* 
+    eatBreakfast()
+    wakeUp()
+*/
+
+// CallStack 5:
+/* 
+    cookFood()
+    eatBreakfast()
+    wakeUp()
+*/
+
+// CallStack 6:
+/* 
+    cookFood() // return items
+    eatBreakfast()
+    wakeUp()
+*/
+
+// CallStack 7:
+/* 
+    eatBreakfast() // return `Eating ...`
+    wakeUp()
+*/
+
+// CallStack 8:
+/* 
+    console.log()
+    wakeUp()
+*/
+
+// CallStack 9:
+/* 
+    wakeUp()
+*/
+
+
+// CallStack 10:
+/* 
+    *** empty ***
+*/
