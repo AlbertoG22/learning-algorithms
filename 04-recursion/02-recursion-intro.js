@@ -18,4 +18,17 @@ function countDown(num){
     num--;
     countDown(num);
 }
-countDown(5);
+countDown(3);
+
+/* 
+    Explanation:
+    - Cuando mandamos llamar la función con el argumento "3", lo que primero se hace es preguntar si el
+    número que se pasó es menor o igual que 0.
+    - De no serlo, se imprime en consola, se resta 1 y se vuelve a llamar a sí misma pero con el input
+    diferente.
+    - Y así sucesivamente hasta que se le manda el valor 0 y entra en el base case, en donde termina 
+    la ejecución de la función.
+
+    Importante: En este caso debemos tener un 'return' para finalizar la ejecución de la función, caso
+    contrario, se continuaría llamando ahora con valores negativos, creando un loop infinito. 
+*/
