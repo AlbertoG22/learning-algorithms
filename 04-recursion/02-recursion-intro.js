@@ -47,3 +47,32 @@ function sumRange(num){
     if(num === 1) return 1; 
     return num + sumRange(num-1);
 }
+sumRange(4); // 10
+
+/* 
+    return 4    +   sumRange(3)
+                        return 3    +   sumRange(2)
+                                            return 2    +   sumRange(1)
+                                                                return 1 
+*/
+
+// Una vez que llegó al base case, se empieza a resolver hacia atrás las llamadas a la función:
+/* 
+    return 10
+    return 4    +       6
+                    return 3    +     3
+                                    return 2    +       1
+                                                    return 1
+*/
+
+/* 
+    Explanation:
+    - Lo primero que pasa al llamara a la función es preguntar si el valor que se le pasó es igual a 1,
+    si no, inicia la recursión.
+    - La primera vez que se llama, retorna el número que se le pasó + el resultado de llamar a sí misa
+    pero con un valor menos. 
+    - Este proceso de llamar al resultado de llamar otra vez la función hace que tengamos llamadas 
+    esperando por ser resueltas.
+    - Esto se detiene hasta que el valor es 1, lo que resuelve "sumRange(1)", y al resolverse esta, se
+    empiezan a resolver las demás hasta llegar a la primera y retornar la solución (10);
+*/
