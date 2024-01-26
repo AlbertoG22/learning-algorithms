@@ -8,7 +8,7 @@
     
 */
 
-// Ejemplo:
+// Ejemplo 1:
 function countDown(num){
     if(num <= 0) {
         console.log("All done!");
@@ -40,3 +40,10 @@ countDown(3);
     Importante: En este caso debemos tener un 'return' para finalizar la ejecución de la función, caso
     contrario, se continuaría llamando ahora con valores negativos, creando un loop infinito. 
 */
+
+
+// Ejemplo 2:
+function sumRange(num){
+    if(num === 1) return 1; 
+    return num + sumRange(num-1);
+}
