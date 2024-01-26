@@ -7,3 +7,26 @@
     hay otra, la función recursiva.
     Esto se hace comúnmente cuando necesitamos compilar algo como un array o una lista de datos.
 */
+
+// Ejemplo:
+function collectOddValues(arr){
+    
+    let result = []
+
+    function helper(helperInput){
+        if(helperInput.length === 0) {
+            return;
+        }
+        
+        if(helperInput[0] % 2 !== 0){
+            result.push(helperInput[0])
+        }
+        
+        helper(helperInput.slice(1))
+    }
+    
+    helper(arr)
+
+    return result;
+
+}
