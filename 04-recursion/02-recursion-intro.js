@@ -76,3 +76,11 @@ sumRange(4); // 10
     - Esto se detiene hasta que el valor es 1, lo que resuelve "sumRange(1)", y al resolverse esta, se
     empiezan a resolver las demás hasta llegar a la primera y retornar la solución (10);
 */
+
+
+// Ejemplo 3 (factorial):
+function factorial(num) {
+    if(num === 1) return 1;
+    return num * factorial(num - 1);
+}
+factorial(5); // 120
