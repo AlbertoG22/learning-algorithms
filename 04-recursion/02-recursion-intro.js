@@ -84,3 +84,9 @@ function factorial(num) {
     return num * factorial(num - 1);
 }
 factorial(5); // 120
+
+/* 
+    Explanation:
+    - Este ejercicio es casi idéntico al anterior, solo en vez de sumar los números, se multiplican,
+    pero la idea es la misma.
+*/
