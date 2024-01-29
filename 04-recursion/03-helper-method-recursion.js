@@ -88,3 +88,24 @@ collectOddValues([1, 2, 3, 4, 5]);
     - Y por último, se asigna el valor al nuevo array del resultado de concatenar el array nuevo con el 
     resultado de volver a llamar a la función, pero ahora sin el primer elemento del array original.
 */
+
+/* 
+    Teniendo el ejemplo [1, 2, 3, 4, 5], lo que pasa es lo siguiente:
+    [1].concat(collectOddValues([2, 3, 4, 5]))
+                    [].concat(collectOddValues([3, 4, 5]))
+                                   [3].concat(collectOddValues([4, 5]))
+                                                   [].concat(collectOddValues([5]))
+                                                                  [5].concat(collectOddValues([]))
+                                                                                return []
+*/
+
+// Una vez que se llegó al case base, se empieza a concatenar hacia arriba:
+/* 
+    return [1, 3, 5]
+    [1].concat([3, 5]) = [1, 3, 5]
+                [].concat([3, 5]) = [3, 5]
+                            [3].concat([5]) = [3, 5]
+                                        [].concat([5]) = [5]
+                                                    [5].concat([]) = [5]
+                                                        return []
+*/
