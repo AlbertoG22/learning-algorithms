@@ -14,3 +14,21 @@
     fib(28); // 317811
     fib(35); // 9227465
 */
+
+// ---------------- Mi solución ----------------
+function fib(n) {
+    let fibArr = [1, 1];
+
+    if(n <= fibArr.length) return fibArr[n - 1];
+    function fibonacci(prevA, prevB) {
+        let currFib = prevA + prevB;
+        fibArr.push(currFib);
+        if(n === fibArr.length) return;
+        fibonacci(prevB, currFib);
+    }
+    
+    fibonacci(1, 1);
+    // console.log(fibArr);
+    return fibArr[n - 1];
+}
+fib(4); // 3
