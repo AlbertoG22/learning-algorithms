@@ -17,3 +17,10 @@ function power(base, exp) {
     return base * power(base, exp - 1);
 }
 power(2,4); // 16
+
+
+// ---------------- Solución del curso ----------------
+function power(base, exponent){
+    if(exponent === 0) return 1;
+    return base * power(base,exponent-1);
+}
