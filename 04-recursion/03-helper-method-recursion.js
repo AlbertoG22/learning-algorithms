@@ -74,3 +74,17 @@ function collectOddValues(arr){
     newArr = newArr.concat(collectOddValues(arr.slice(1)));
     return newArr;
 }
+collectOddValues([1, 2, 3, 4, 5]);
+
+/* 
+    Explanation:
+    Como vimos en el ejemplo anterior, la idea de hacer una función por fuera es que cada que se vuelva
+    a ejecutar la función recursiva no se pierda el contenido del array y mantenga la info.
+    Sin embargo, con pure recursion también es posible hacerlo, aunque es más complejo que el anterior.
+    - Lo primero que se hace es crear el array vacío donde se almacenarán los valores impares, el cual
+    se vaciará cada vez que la función se ejecute.
+    - Después revisa el base case, donde retorna el array generado en caso de ya no tener elementos.
+    - La segunda sentencia if revisa si el valor es impar, si lo es, lo añade al array.
+    - Y por último, se asigna el valor al nuevo array del resultado de concatenar el array nuevo con el 
+    resultado de volver a llamar a la función, pero ahora sin el primer elemento del array original.
+*/
