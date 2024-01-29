@@ -7,12 +7,13 @@
     por ejemplo, el factorial cuatro (4!) es igual a 24, porque 4 * 3 * 2 * 1 es igual a 24. 
     El factorial cero (0!) es siempre 1.
 
+    Output:
     factorial(0); // 1
     factorial(4); // 24
 */
 
 // ---------------- Mi solución ----------------
 function factorial(num) {
-    if(num === 0) return 1
+    if(num === 0) return 1;
     return num * factorial(num - 1);
 }
