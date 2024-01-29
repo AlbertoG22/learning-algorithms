@@ -15,3 +15,10 @@ function recursiveRange(num) {
     return num + recursiveRange(num - 1);
 }
 recursiveRange(10); // 55 
+
+
+// ---------------- Solución del curso ----------------
+function recursiveRange(x){
+    if (x === 0 ) return 0;
+    return x + recursiveRange(x-1);
+}
