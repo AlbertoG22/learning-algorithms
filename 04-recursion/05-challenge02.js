@@ -10,3 +10,9 @@
     factorial(0); // 1
     factorial(4); // 24
 */
+
+// ---------------- Mi solución ----------------
+function factorial(num) {
+    if(num === 0) return 1
+    return num * factorial(num - 1);
+}
