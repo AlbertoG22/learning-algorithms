@@ -53,3 +53,24 @@ collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]);
     que se ejecute se va a borrar y crear nuevamente el array. Es por esto que la declaración del array
     se deja fuera, y dentro solo se va actualizando.
 */
+
+// Solution with Pure Recursion
+/* 
+    Esta es otra solución al problema anterior pero usando la recursividad pura, es decir, sin ayuda de
+    una segunda función que envuelva la recursiva.
+    Es más complejo que la solución anterior, pero también es válida.
+*/
+function collectOddValues(arr){
+    let newArr = [];
+    
+    if(arr.length === 0) {
+        return newArr;
+    }
+        
+    if(arr[0] % 2 !== 0){
+        newArr.push(arr[0]);
+    }
+        
+    newArr = newArr.concat(collectOddValues(arr.slice(1)));
+    return newArr;
+}
