@@ -11,3 +11,22 @@
     isPalindrome('amanaplanacanalpanama'); // true
     isPalindrome('amanaplanacanalpandemonium'); // false
 */
+
+// ---------------- Mi solución ----------------
+function isPalindrome(str) {
+    let reverseStr = '';
+    let normalStr = str;
+
+    function revStr(string) {
+        if(string.length === 0) return;
+        reverseStr += string[string.length - 1];
+        revStr(string.slice(0, string.length - 1));
+    }
+
+    revStr(normalStr);
+    // console.log(reverseStr);
+
+    if(reverseStr === str) return true;
+    else return false;
+}
+isPalindrome('awesome'); // false
