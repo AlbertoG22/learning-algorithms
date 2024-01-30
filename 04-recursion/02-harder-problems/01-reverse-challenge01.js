@@ -8,3 +8,16 @@
     reverse('awesome'); // 'emosewa'
     reverse('rithmschool'); // 'loohcsmhtir'
 */
+
+// ---------------- Mi solución ----------------
+function reverse(str) {
+    let newStr = [];
+    function reverseStr(arr) {
+        if(arr.length === 0) return;
+        newStr.push(arr[arr.length - 1]);
+        reverseStr(arr.slice(0, arr.length - 1));
+    }
+    reverseStr(str.split(''));
+    return newStr.join('');
+}
+reverse('rithmschool'); // 'loohcsmhtir'
