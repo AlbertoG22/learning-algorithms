@@ -22,6 +22,7 @@ function reverse(str) {
 }
 reverse('rithmschool'); // 'loohcsmhtir'
 
+
 // ---------------- Solución del curso ----------------
 function reverse(str){
 	if(str.length <= 1) return str;
