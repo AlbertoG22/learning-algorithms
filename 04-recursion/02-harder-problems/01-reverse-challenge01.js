@@ -41,6 +41,7 @@ reverse('awesome'); // 'emosewa'
 */
 
 /* 
+    Ejemplo:
     ------------------ 'awesome' ------------------
     1°: return  fn('wesome') + 'a'
     2°: return  fn('esome') + 'w'

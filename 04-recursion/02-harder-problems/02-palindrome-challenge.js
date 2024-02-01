@@ -39,3 +39,30 @@ function isPalindrome(str){
     if(str[0] === str.slice(-1)) return isPalindrome(str.slice(1,-1))
     return false;
 }
+isPalindrome('tacocat'); // true
+
+/* 
+    Explanation:
+    - Lo que se hace primero es revisar siempre si el string tiene una longitud de 1 (por supuesto que
+    es igual al derecho o al revés) o si tiene longitud de 2 (revisa que sean el mismo elemento).
+    - Esta condición de 1 elemento va a ser útiles también cuando sí sea palíndromo.
+    - Si no cae en estas condiciones, se comprara el primer y último elemento del string, como es un 
+    palíndromo, deberían ser iguales. si no lo son, retorna false.
+    - Si estas letras sí son iguales, se manda a llamar la misma función, pero ahora sin estos dos 
+    elementos del string.
+    - Con cada llamada a la función se le restan dos letras al string, hasta que queda un elemento y
+    entra en la condición que retorna true.
+*/
+
+/* 
+    Ejemplo:
+    ------------------ 'tacocat' ------------------
+    str[0] === str.slice(-1) → 't' === 't'    ✔
+    
+    1°: return  fn('acoca')
+    2°: return  fn('coc')
+    3°: return  fn('o')
+
+    'o'.length === 1   ✔  
+    return true;
+*/
