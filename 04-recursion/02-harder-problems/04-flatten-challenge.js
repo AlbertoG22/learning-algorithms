@@ -51,19 +51,6 @@ function flatten(oldArr){
     - Una vez que termina de recorrer el array original, retorna el nuevo con los elementos esparcidos.
 */
 
-function flatten(oldArr){
-    let newArr = [];
-    for(let i = 0; i < oldArr.length; i++){
-        if(Array.isArray(oldArr[i])){
-            newArr = newArr.concat(flatten(oldArr[i]));
-        } else {
-            newArr.push(oldArr[i]);
-        }
-    } 
-    return newArr;
-}
-flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
-
 /* 
     Ejemplo:
     ------------------ [ [[[1], [[[2]]], [[[[[[[3]]]]]]]]] ] ------------------
@@ -106,7 +93,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 3ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [1];
     - Hace i++;
     - Longitud del array (oldArr) = 3       (i = 1)
@@ -147,7 +134,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 5ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [2];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 5ª ejecución y retorna newArr:
@@ -157,7 +144,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 4ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [2];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 4ª ejecución y retorna newArr:
@@ -167,7 +154,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 3ª vez que se ejecuta flatten():
     newArr = [1];
-    - hace la concatenación del rasultado anterior, como en la tercera llamada newArr ya era [1],
+    - hace la concatenación del resultado anterior, como en la tercera llamada newArr ya era [1],
     se concatena el nuevo resultado:
     newArr = [1] + [2] = [1, 2]
     - Hace i++;
@@ -238,7 +225,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 9ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 9ª ejecución y retorna newArr:
@@ -248,7 +235,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 8ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 8ª ejecución y retorna newArr:
@@ -258,7 +245,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 7ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 7ª ejecución y retorna newArr:
@@ -268,7 +255,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 6ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 6ª ejecución y retorna newArr:
@@ -278,7 +265,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 5ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 5ª ejecución y retorna newArr:
@@ -288,7 +275,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 4ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 4ª ejecución y retorna newArr:
@@ -298,7 +285,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 3ª vez que se ejecuta flatten():
     newArr = [1, 2];
-    - hace la concatenación del rasultado anterior, como en la tercera llamada newArr ya era [1, 2],
+    - hace la concatenación del resultado anterior, como en la tercera llamada newArr ya era [1, 2],
     se concatena el nuevo resultado:
     newArr = [1, 2] + [3] = [1, 2, 3]
     - Hace i++;
@@ -311,7 +298,7 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 2ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [1, 2, 3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 2ª ejecución y retorna newArr:
@@ -321,10 +308,10 @@ flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]); // [1,2,3]
 
     ➔ 1ª vez que se ejecuta flatten():
     newArr = [];
-    - hace la concatenación del rasultado anterior:
+    - hace la concatenación del resultado anterior:
     newArr = [1, 2, 3];
     - Hace i++;
     - Ya no hay más elementos en el array, termina la 1ª ejecución y retorna newArr:
     return newArr;
-    - FIN DE LA RECURSIVIDAD!
+    - ¡FIN DE LA RECURSIVIDAD!
 */
