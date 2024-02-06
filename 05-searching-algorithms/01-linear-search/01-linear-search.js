@@ -45,3 +45,12 @@ function linearSearch(arr, val) {
     return -1;
 }
 // la misma solución
+
+/* 
+    Time Complexity de Linear Search:
+    O(n) ➔ Lineal
+    
+    En el mejor de los casos el BigO será O(1) y en el peor O(n). A medida que el tamaño del array
+    aumente, más veces tendrá que recorrer el array en búsqueda del elemento, por lo que el general
+    trend es O(n).
+*/
