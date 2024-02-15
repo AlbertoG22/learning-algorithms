@@ -71,3 +71,32 @@ function binarySearch(arr, elem) {
     return arr[middle] === elem ? middle : -1;
 }
 binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 28);
+
+/*
+    Explanation:
+    - Lo que hacemos primero es crear las variables para los índices del inicio, el final y la posición
+    de en medio.
+    - Esta última la calculamos sumando el índice del inicio + el índice del final, y dividiendo el 
+    resultado entre 2. En caso de que sea decimal, lo redondeamos al número inferior, es decir, ignoramos
+    los decimales.
+    - En el primer caso tenemos lo siguiente:
+    [2, 5, 6, 9, 13, 15, 28, 30]    =  (0 + 7) / 2  =       7 / 2      =   3.5     =   3
+     S        M              E
+     0        3              7
+    - Por lo que el inicio es el índice 0, el final el último elemento con índice 7, y el valor medio
+    con el índice 3.
+    - Lo que sigue es ejecutar un ciclo while donde se ejecute mientras el valor medio sea diferente al
+    que estamos buscando y el valor del índice start sea menor o igual al end.
+    - Si el valor que buscamos es menor que el de en medio, la idea es recorrer los índices de lugar
+    para descartar la mitad de elementos. Ahora el final será el valor de en medio - 1, puesto que si 
+    lo asignamos al de en medio, de antemano ya sabemos que no es el valor que buscamos, por lo que 
+    sería redundante si lo igualamos a este.
+    - El valor del inicio se mantiene, nos quedamos con la primera mitad de valores y se recalcula el
+    valor central.
+    - Caso contrario, si el valor que buscamos es mayor al valor medio, descartamos la primera mitad
+    y nos quedamos con la segunda. Ahora el valor de inicio será el de en medio + 1 (misma razón que 
+    en el caso anterior), y se recalculamos el valor central.
+    - Este proceso se repite hasta que recorra todos los elementos del array.
+    - Si el elemento del array en la posición middle es igual al que buscamos, retorna el index, si no,
+    retorna -1.
+*/
