@@ -10,7 +10,7 @@
 
 /* 
     Problema:
-    Escriba una función llamada 'binarioSearch' que acepte un array ORDENADO y un valor y retorne el 
+    Escriba una función llamada 'binarySearch' que acepte un array ORDENADO y un valor y retorne el 
     índice en el que existe ese valor. De lo contrario, retorne -1.
 
     Pasos:
@@ -32,3 +32,25 @@
     binarySearch([5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 40, 44, 64, 79, 84, 86, 95, 96, 98, 99], 95); // 16
     binarySearch([5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 40, 44, 64, 79, 84, 86, 95, 96, 98, 99], 100); // -1
 */
+
+// ---------------- Mi solución ----------------
+function binarySearch(arr, num) {
+    let min = 0;
+    let max = arr.length - 1;
+ 
+    while (min <= max) {
+        let middle = Math.floor((min + max) / 2);
+ 
+        if (arr[middle] < num) {
+            min = middle + 1;
+        }
+        else if (arr[middle] > num) {
+            max = middle - 1;
+        }
+        else {
+            return middle;
+        }
+    }
+    return -1;
+}
+binarySearch([5, 6, 10, 13, 14, 18, 30, 35, 37, 96, 99], 30); // 6
