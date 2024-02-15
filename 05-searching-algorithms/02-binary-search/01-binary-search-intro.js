@@ -70,7 +70,7 @@ function binarySearch(arr, elem) {
 
     return arr[middle] === elem ? middle : -1;
 }
-binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 28);
+binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 28); // 6
 
 /*
     Explanation:
@@ -99,4 +99,31 @@ binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 28);
     - Este proceso se repite hasta que recorra todos los elementos del array.
     - Si el elemento del array en la posición middle es igual al que buscamos, retorna el index, si no,
     retorna -1.
+
+    S = start
+    M = mid
+    E = end
+
+    Paso 1:
+    [2, 5, 6, 9, 13, 15, 28, 30]    =  (0 + 7) / 2  =       7 / 2      =   3.5     =   3
+     S        M              E
+     0        3              7
+
+    Paso 2:
+    28 > 9
+    [2, 5, 6, 9, 13, 15, 28, 30]    =  (4 + 7) / 2  =       11 / 2      =   5.5     =   5
+                  S   M       E
+                  4   5       7
+
+    Paso 3:
+    28 > 15
+    [2, 5, 6, 9, 13, 15, 28, 30]    =  (6 + 7) / 2  =       13 / 2      =   6.5     =   6
+                         SM   E
+                          6   7
+
+    Paso 4:
+    28 === 28 return 6
+    [2, 5, 6, 9, 13, 15, 28, 30]
+                         SM   E
+                          6   7
 */
