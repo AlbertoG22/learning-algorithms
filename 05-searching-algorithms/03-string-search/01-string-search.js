@@ -43,3 +43,18 @@ function naiveStringSearch(long, short) {
     return count;
 }
 naiveStringSearch('lorie loled', 'lo'); // 2
+
+
+/* 
+    Explanation:
+    - Lo que hace esta solución es muy parecida a la que hice, en donde lo primero que hace es un loop
+    que recorra el string largo.
+    - Lo siguiente es un loop anidado que recorra el string corto.
+    - Después, dentro del inner loop compara la letra actual del string corto con la letra actual del
+    string largo pero sumándole el valor de j, es decir, para que la letra del outer loop vaya avanzando,
+    "j" aumenta 1 y la letra de afuera ("i") también aumenta 1 posición, por eso hace "i + j".
+    - Si no son iguales, rompe el inner loop y "i" aumenta en 1.
+    - Si el inner loop va avanzando hasta que llega al final del array corto, significa que encontró
+    todas las letras en ese orden en el string largo, por lo que aumenta el contador en 1.
+    - Al final retorna el contador.
+*/
