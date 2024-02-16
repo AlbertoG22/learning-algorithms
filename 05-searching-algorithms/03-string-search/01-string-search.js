@@ -14,3 +14,18 @@
     - Si completa el inner loop y encuentra coincidencias, incrementa count.
     - Retornar 'count'.
 */
+
+// ---------------- Mi solución ----------------
+function stringSearch(longStr, shortStr) {
+    let count = 0;
+    for(let a = 0; a < longStr.length; a++) {
+        let innerA = a;
+        for (let b = 0; b <= shortStr.length; b++) {
+            if(b === shortStr.length) count++;
+            if(longStr[innerA] !== shortStr[b]) break;
+            else innerA++;
+        }
+    }
+    return count;
+}
+stringSearch('wowomgzomg', 'omg');
