@@ -127,3 +127,15 @@ binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 28); // 6
                          SM   E
                           6   7
 */
+
+
+/* 
+    Time Complexity de Binary Search:
+    O(log n) ➔ Logarítmica
+    
+    En el mejor de los casos el BigO será O(1) y en el peor O(log n). El logaritmo es la contraparte
+    a una acción exponencial, por lo tanto, supongamos que tenemos un string con 16 elementos, ¿qué
+    número al cuadrado da 16? R = 4
+    Por lo tanto, 4 es el número máximo de pasos en los que encontraremos (o no) el elemento deseado.
+    Esta es la razón por la que un BigO logarítmico es muy bueno.
+*/
